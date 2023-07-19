@@ -52,7 +52,7 @@ export default function Home({ data }: HomeProps) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   try {
     console.log(process.env.ABLY_API_KEY);
     const response = await fetch("https://rest.ably.io/channels", {
